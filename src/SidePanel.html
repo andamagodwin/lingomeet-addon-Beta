@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <!-- See: https://developers.google.com/meet/add-ons/guides/overview#side-panel -->
   <head>
     <title>Meet Add-on Side Panel</title>
-    <script src="./main.js"></script>
   </head>
-
   <body style="width: 100%; height: 100%; margin: 0">
     <div>This is the Add-on Side Panel. Only you can see this.</div>
     <button id="start-activity">Launch Activity in Main Stage.</button>
 
+    <!-- Load script at the end of body -->
+    <script src="./main.js"></script>
     <script>
-      document.body.onload = () => {
-        // Library name (`helloWorld`) is defined in the webpack config.
-        // The function (`setUpAddon`) is defined in main.js.
-        helloWorld.setUpAddon();
-      };
+      // This will execute after main.js is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof helloWorld !== 'undefined') {
+          helloWorld.setUpAddon();
+        } else {
+          console.error('helloWorld is not defined');
+        }
+      });
     </script>
   </body>
 </html>

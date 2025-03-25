@@ -19,5 +19,7 @@ module.exports = {
   output: {
     library: 'helloWorld',
     path: path.resolve(__dirname, './dist/hello-world'),
+    libraryTarget: 'umd', // Crucial addition
+    filename: 'main.js' // It is good practice to explicitly state the filename.
   },
 };
