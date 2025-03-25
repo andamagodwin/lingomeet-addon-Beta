@@ -12,9 +12,11 @@
 
     <script>
       document.body.onload = () => {
-        // Library name (`helloWorld`) is defined in the webpack config.
-        // The function (`initializeMainStage`) is defined in main.js.
-        helloWorld.initializeMainStage();
+        setTimeout(() => {
+          if (window.helloWorld && typeof window.helloWorld.initializeMainStage === 'function') {
+            window.helloWorld.initializeMainStage();
+          }
+        }, 100);
       };
     </script>
   </body>

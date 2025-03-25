@@ -5,8 +5,10 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist/hello-world'),
-    library: 'helloWorld',
-    libraryTarget: 'umd',
+    library: {
+      name: 'helloWorld',
+      type: 'window'
+    }
   },
   mode: 'production',
   module: {

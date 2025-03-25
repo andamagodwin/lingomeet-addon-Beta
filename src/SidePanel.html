@@ -10,13 +10,15 @@
     <!-- Load script at the end of body -->
     <script src="https://andamagodwin.github.io/lingomeet-addon-Beta/dist/hello-world/main.js"></script>
     <script>
-      // This will execute after main.js is loaded
       document.addEventListener('DOMContentLoaded', () => {
-        if (typeof helloWorld !== 'undefined') {
-          helloWorld.setUpAddon();
-        } else {
-          console.error('helloWorld is not defined');
-        }
+        // Add a small delay to ensure the script is loaded
+        setTimeout(() => {
+          if (window.helloWorld && typeof window.helloWorld.setUpAddon === 'function') {
+            window.helloWorld.setUpAddon();
+          } else {
+            console.error('helloWorld.setUpAddon is not available');
+          }
+        }, 100);
       });
     </script>
   </body>

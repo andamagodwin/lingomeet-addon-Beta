@@ -24,7 +24,14 @@ async function initializeMainStage() {
 }
 
 // Explicitly attach functions to window object
-window.helloWorld = {
-  setUpAddon,
-  initializeMainStage
-};
+// ... your existing code ...
+
+// Explicitly assign to window if needed
+if (typeof window !== 'undefined') {
+  window.helloWorld = {
+    setUpAddon,
+    initializeMainStage
+  };
+}
+
+export { setUpAddon, initializeMainStage };
