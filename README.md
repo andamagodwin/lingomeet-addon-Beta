@@ -8,3 +8,4 @@ You can view a deployed version of this Add-on at <https://googleworkspace.githu
 
 originurl   -----https://andamagodwin.github.io/lingomeet-addon-Beta/
 mainstage-url ---- https://andamagodwin.github.io/lingomeet-addon-Beta/src/MainStage.html
+mainstage-url ---- https://andamagodwin.github.io/lingomeet-addon-Beta/src/SidePanel.html
