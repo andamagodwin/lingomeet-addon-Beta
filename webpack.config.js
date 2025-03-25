@@ -3,10 +3,24 @@ const path = require('path');
 module.exports = {
   entry: './src/main.js',
   output: {
-    library: 'helloWorld',  // This exposes your functions globally
-    libraryTarget: 'window', // Ensures the global object is available
-    path: path.resolve(__dirname, './dist/hello-world'),
-    filename: 'main.js'
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist/hello-world'),
+    library: 'helloWorld',
+    libraryTarget: 'umd',
   },
-  mode: 'production' // Change to 'production' for deployment
+  mode: 'production',
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  }
 };
