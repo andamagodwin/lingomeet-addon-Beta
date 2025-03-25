@@ -16,7 +16,7 @@ import { meet } from '@googleworkspace/meet-addons/meet.addons';
 
 const CLOUD_PROJECT_NUMBER = '738129672596';
 const MAIN_STAGE_URL =
-  'https://googleworkspace.github.io/meet/hello-world/MainStage.html';
+  'https://andamagodwin.github.io/lingomeet-addon-Beta/src/MainStage.html';
 
 /**
  * Prepares the Add-on Side Panel Client, and adds an event to launch the

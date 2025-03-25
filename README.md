@@ -4,3 +4,7 @@ This is approximately the simplest possible Meet add-on. The only requirements t
 
 You can view a deployed version of this Add-on at <https://googleworkspace.github.io/meet/hello-world/SidePanel.html> and its corresponding [MainStage.html](https://googleworkspace.github.io/meet/hello-world/MainStage.html).
 # lingomeet-addon-Beta
+
+
+originurl   -----https://andamagodwin.github.io/lingomeet-addon-Beta/
+mainstage-url ---- https://andamagodwin.github.io/lingomeet-addon-Beta/src/MainStage.html
